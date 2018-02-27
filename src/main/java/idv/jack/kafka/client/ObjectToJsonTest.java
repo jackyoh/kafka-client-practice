@@ -36,7 +36,7 @@ public class ObjectToJsonTest {
             runObject.setLines(lines);
 
             String jsonString = gson.toJson(runObject);
-            System.out.println(jsonString);
+            //System.out.println(jsonString);
         }
     }
 }
