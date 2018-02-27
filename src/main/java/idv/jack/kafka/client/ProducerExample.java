@@ -11,13 +11,13 @@ public class ProducerExample {
 
     public static void main(String args[]){
        Properties kafkaProps = new Properties();
-       kafkaProps.put("bootstrap.servers", "host1:9092");
+       kafkaProps.put("bootstrap.servers", "10.1.3.227:9092,10.1.3.228:9092,10.1.3.229:9092");
        kafkaProps.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
        kafkaProps.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
        KafkaProducer producer = new KafkaProducer<String, String>(kafkaProps);
 
-       ProducerRecord<String, String> record = new ProducerRecord<String, String>("topic124",
+       ProducerRecord<String, String> record = new ProducerRecord<String, String>("datatest1",
                                        "key101", "value993");
        try {
           // producer.send(record); //fire and forget
