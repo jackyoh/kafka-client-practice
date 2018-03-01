@@ -25,10 +25,10 @@ public class GenerateData {
         return columnNames.substring(0, columnNames.length() - 1);
     }
 
-    public String getLines(int number){
+    public String getLines(int runNumber, int line, int number){
         StringBuffer values = new StringBuffer();
         for(int i = 1; i <= number; i++) {
-            values.append("value" + i + ",");
+            values.append("run" + runNumber + "-value" + line + "-" + i + ",");
         }
         return values.substring(0, values.length() - 1);
     }
