@@ -3,7 +3,7 @@ package idv.jack.kafka.client;
 import java.util.List;
 import java.util.Map;
 
-public class RunObject {
+public class RunBean {
     private String store;
     private Map<String, String> meta;
     private String header;

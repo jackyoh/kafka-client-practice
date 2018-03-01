@@ -12,7 +12,7 @@ public class ObjectToJsonTest {
     public static void main(String args[]){
         Gson gson = new Gson();
         for(int k =0 ; k <= 20 ; k++) {
-            RunObject runObject = new RunObject();
+            RunBean runObject = new RunBean();
             runObject.setStore("hdfs");
 
             Map<String, String> maps = new HashMap<String, String>();

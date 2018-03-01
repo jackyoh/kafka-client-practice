@@ -25,7 +25,7 @@ public class SendToKafkaTest {
             Gson gson = new Gson();
 
             for(int k =0 ; k <= 200000 ; k++) {
-                RunObject runObject = new RunObject();
+                RunBean runObject = new RunBean();
                 runObject.setStore("hdfs");
 
                 Map<String, String> maps = new HashMap<String, String>();
