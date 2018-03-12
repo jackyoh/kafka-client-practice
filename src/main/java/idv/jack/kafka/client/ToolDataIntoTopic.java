@@ -13,7 +13,8 @@ public class ToolDataIntoTopic {
 
     public static void main(String args[]) throws Exception {
        Properties kafkaProps = new Properties();
-       kafkaProps.put("bootstrap.servers", "10.1.3.227:9092,10.1.3.228:9092,10.1.3.229:9092");
+       //kafkaProps.put("bootstrap.servers", "10.1.3.227:9092,10.1.3.228:9092,10.1.3.229:9092");
+       kafkaProps.put("bootstrap.servers", "od2dev1:9092,od2dev3:9092");
        kafkaProps.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
        kafkaProps.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
@@ -62,7 +63,7 @@ public class ToolDataIntoTopic {
           String result = gson.toJson(runBean);
 
           count ++;
-          ProducerRecord<String, String> record = new ProducerRecord<String, String>("datatest4",
+          ProducerRecord<String, String> record = new ProducerRecord<String, String>("datatest1",
                    "key" + count, result);
           producer.send(record).get();
        }
